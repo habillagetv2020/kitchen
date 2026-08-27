@@ -1,0 +1,12 @@
+name = "kitchen"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kitchen_contacts"
+database_id = "5d1982ed-6141-4809-9274-efca2999f42d"
