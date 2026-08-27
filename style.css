@@ -124,6 +124,49 @@ nav.main-nav a[aria-current="page"] {
   nav.main-nav a { font-size: 11px; }
 }
 
+/* ---------- Scrolling ticker ---------- */
+
+.ticker {
+  background: var(--rust);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  padding: 10px 0;
+}
+
+.ticker-track span::after {
+  content: "•";
+  margin: 0 28px;
+  color: var(--cream);
+  opacity: 0.6;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
 /* ---------- Hero ---------- */
 
 .hero {
